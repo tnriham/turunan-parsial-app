@@ -15,7 +15,7 @@ try:
 
   st.latex(f"f(x, y) = {sp.latex(f)}")
   st.latex(f"\\frac{{\\partial f}}{{\\partial x}} = {sp.latex(fx)}")
-  st.latex(f"\\frac{{\\partial f}}{{\\partail x}} = {sp.latex(fy)}")
+  st.latex(f"\\frac{{\\partial f}}{{\\partial x}} = {sp.latex(fy)}")
 
   x0 = st.number_input("Nilai x0:", value=1.0)
   y0 = st.number_input("Nilai y0:", value=2.0)
