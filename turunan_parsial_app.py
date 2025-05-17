@@ -34,7 +34,7 @@ try:
   X, Y = np.meshgrid(x_vals, y_vals)
   Z = sp.lambdify((x, y), f, 'numpy')(X, Y)
   Z_tangent = float(f_val) + float(fx_val)*(X - x0) + float(fy_val)*(Y - y0)
- st.image("arielee.jpeg", width=300)
+
 
   fig = plt.figure(figsize=(10, 60))
   ax = fig.add_subplot(111, projection='3d')
