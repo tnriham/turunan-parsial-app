@@ -32,11 +32,11 @@ try:
   x_vals = np.linspace(x0 - 2, x0 + 2, 50)
   y_vals = np.linspace(y0 - 2, y0 + 2, 50)
   X, Y = np.meshgrid(x_vals, y_vals)
-  st.image("arielee.jpeg", width=300)
   Z = sp.lambdify((x, y), f, 'numpy')(X, Y)
   Z_tangent = float(f_val) + float(fx_val)*(X - x0) + float(fy_val)*(Y - y0)
+ st.image("arielee.jpeg", width=300)
 
-  fig = plt.figure(figsize=(10, 6))
+  fig = plt.figure(figsize=(10, 60))
   ax = fig.add_subplot(111, projection='3d')
   ax.plot_surface(X, Y, Z, alpha=0.7, cmap='viridis')
   ax.plot_surface(X, Y, Z_tangent, alpha=0.5, color='violet')
