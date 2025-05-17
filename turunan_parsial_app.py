@@ -28,7 +28,7 @@ try:
   st.write("Gradien di titik (x0, y0):", f"({fx_val}, {fy_val})")
 
   st.subheader("Grafik Permukaan & Bidang Singgung")
-  
+  st.image(
   x_vals = np.linspace(x0 - 2, x0 + 2, 50)
   y_vals = np.linspace(y0 - 2, y0 + 2, 50)
   X, Y = np.meshgrid(x_vals, y_vals)
