@@ -37,6 +37,7 @@ try:
 
 
   fig = plt.figure(figsize=(10, 60))
+  st.image("arielee.jpeg")
   ax = fig.add_subplot(111, projection='3d')
   ax.plot_surface(X, Y, Z, alpha=0.7, cmap='viridis')
   ax.plot_surface(X, Y, Z_tangent, alpha=0.5, color='violet')
