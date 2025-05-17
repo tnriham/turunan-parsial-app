@@ -28,10 +28,11 @@ try:
   st.write("Gradien di titik (x0, y0):", f"({fx_val}, {fy_val})")
 
   st.subheader("Grafik Permukaan & Bidang Singgung")
-  st.image("arielee.jpeg", width=300)
+
   x_vals = np.linspace(x0 - 2, x0 + 2, 50)
   y_vals = np.linspace(y0 - 2, y0 + 2, 50)
   X, Y = np.meshgrid(x_vals, y_vals)
+    st.image("arielee.jpeg", width=300)
   Z = sp.lambdify((x, y), f, 'numpy')(X, Y)
   Z_tangent = float(f_val) + float(fx_val)*(X - x0) + float(fy_val)*(Y - y0)
 
