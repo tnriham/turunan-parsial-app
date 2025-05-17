@@ -36,7 +36,7 @@ try:
   Z_tangent = float(f_val) + float(fx_val)*(X - x0) + float(fy_val)*(Y - y0)
 
 
-  fig = plt.st.image("arielee.jpeg")
+  fig = plt.image("arielee.jpeg")
   
   ax = fig.add_subplot(111, projection='3d')
   ax.plot_surface(X, Y, Z, alpha=0.7, cmap='viridis')
