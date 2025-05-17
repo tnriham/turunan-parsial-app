@@ -1,6 +1,7 @@
 import streamlit as st
 import sympy as sp
 import matplotlib.pyplot as plt
+import numpy as np
 
 st.title("Aplikasi Turunan Parsial")
 
