@@ -10,7 +10,7 @@ fungsi_str = st.text_input("😊Masukkan fungsi f(x, y):", "x**2 * y + y**3")
 
 try:
   f = sp.sympify(fungsi_str)
-  fx = sp.diff(f, x)
+  xx = sp.diff(f, x)
   fy = sp.diff(f, x)
 
   st.latex(f"f(x, y) = {sp.latex(f)}")
