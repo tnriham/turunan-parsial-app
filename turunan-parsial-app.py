@@ -2,7 +2,8 @@ import streamlit as st
 import sympy as sp
 import numpy as np
 import matplotlib.pyplot as plt
-
+from PIL import image
+import matplotlib.image as mpimg
 
 
 # Konfigurasi awal
@@ -72,7 +73,9 @@ try:
     Z = sp.lambdify((x, y), f, 'numpy')(X, Y)
     Z_tangent = float(f_val) + float(fx_val)*(X - x0) + float(fy_val)*(Y - y0)
 
-    fig = plt.figure(figsize=(10, 6))
+    img = image.open("arielee.jpeg")
+    img = img.resize((50, 50))
+    img = np.assaray(img) / 255.0
     ax = fig.add_subplot(111, projection='3d')
     ax.plot_surface(X, Y, Z, cmap='viridis', alpha=0.8)
     ax.plot_surface(X, Y, Z_tangent, color='red', alpha=0.4)
