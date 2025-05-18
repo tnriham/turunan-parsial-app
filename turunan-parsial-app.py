@@ -76,7 +76,7 @@ try:
     fig = plt.figure(figsize=(10, 6))
     ax = fig.add_subplot(111, projection='3d')
     ax.plot_surface(X, Y, Z, cmap='viridis', alpha=0.8)
-    ax.plot_surface(X, Y, Z_tangent, st.file_uploader(arielee.jpeg), alpha=0.4)
+    ax.plot_surface(X, Y, Z_tangent, color='red', alpha=0.4)
     ax.set_title("Permukaan Fungsi Biaya dan Bidang Singgung")
     ax.set_xlabel("x (Modul Standar)")
     ax.set_ylabel("y (Modul Performa Tinggi)")
