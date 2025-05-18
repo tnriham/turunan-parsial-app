@@ -14,7 +14,7 @@ try:
   fy = sp.diff(f, x)
 
   st.latex(f"f(x, y) = {sp.latex(f)}")
-  st.latex(f"\\frac{{\\partil f}}{{\\partial x}} = {sp.latex(fx)}")
+  st.latex(f"\\frac{{\\partial f}}{{\\partial x}} = {sp.latex(fx)}")
   st.latex(f"\\frac{{\\partial f}}{{\\partial x}} = {sp.latex(fy)}")
 
   x0 = st.number_input("Nilai x0:", value=1.0)
