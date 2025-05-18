@@ -1,7 +1,9 @@
 import streamlit as st
+from PIL import image
 import sympy as sp
 import numpy as np
 import matplotlib.pyplot as plt
+
 
 
 # Konfigurasi awal
