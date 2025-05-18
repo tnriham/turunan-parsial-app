@@ -76,9 +76,11 @@ try:
     img = image.open("arielee.jpeg")
     img = img.resize((50, 50))
     img = np.assaray(img) / 255.0
+    if img.shape[-1] == 4:
+        img = img[:, :, :3]
     ax = fig.add_subplot(111, projection='3d')
     ax.plot_surface(X, Y, Z, cmap='viridis', alpha=0.8)
-    ax.plot_surface(X, Y, Z_tangent, color='red', alpha=0.4)
+    ax.plot_surface(X, Y, Z_tangent, facecolor=img, rstride=1, csstride=1)
     ax.set_title("Permukaan Fungsi Biaya dan Bidang Singgung")
     ax.set_xlabel("x (Modul Standar)")
     ax.set_ylabel("y (Modul Performa Tinggi)")
